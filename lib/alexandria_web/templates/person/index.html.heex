@@ -1,0 +1,27 @@
+<h1 class="mt-5 text-center">Gerenciar Pessoas</h1>
+
+<a class="btn btn-success" href={Routes.person_path(@conn, :new)}>Cadastrar</a>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for p <- @people do %>
+        <tr>
+          <th scope="row"><%= p.id %></th>
+          <td><%= p.name %></td>
+          <td><%= p.email %></td>
+          <td> <%= link("Editar", to: Routes.person_path(@conn, :edit, p.id), class: "btn btn-success") %> </td>
+          <td><button type="button" class="btn btn-danger delete-button" data-message="Deseja realmente excluir a pessoa selecionada ?" data-url={"/person/delete/#{p.id}"} data-method="delete" >Excluir</button></td>
+        </tr>
+      <% end %>
+      
+    </tbody>
+  </table>

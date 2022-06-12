@@ -1,0 +1,3 @@
+<h1 class="mt-5 mb-5">Editar Pessoa</h1>
+
+<%= render("form.html", Map.put(assigns, :action, Routes.person_path(@conn, :edit, @person))) %>

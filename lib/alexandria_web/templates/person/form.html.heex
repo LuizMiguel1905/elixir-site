@@ -1,0 +1,39 @@
+<.form let={f} for={@changeset} action={@action}>
+
+
+<%= if @changeset.action do %>
+  <div class="alert alert-danger">
+    <p>Verifique os itens marcados</p>
+  </div>
+<% end %>
+ 
+<div class="row mb-3">
+  <div class="col">
+    <%= label f, :name, class:  "form-label", for: "inputName" %>
+    <%= text_input f, :name, class: "form-control", id: "inputName", value: input_value(f, :name) %>
+    <%= error_tag f, :name %>
+  </div>
+  <div class="col">
+    <%= label f, :email, class:  "form-label", for: "inputEmail" %>
+    <%= text_input f, :email, class: "form-control", id: "inputEmail", value: input_value(f, :email) %>
+    <%= error_tag f, :email %>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col">
+    <%= label f, :password, class:  "form-label", for: "inputPassword" %>
+    <%= password_input f, :password, class: "form-control", id: "inputPassword", value: input_value(f, :password) %>
+    <%= error_tag f, :password %>
+
+  </div>
+  <div class="col">
+    <%= label f, :password_confirmation, class:  "form-label", for: "inputPasswordConfirmation" %>
+    <%= password_input f, :password_confirmation, class: "form-control", id: "inputPasswordConfirmation", value: input_value(f, :password_confirmation) %>
+    <%= error_tag f, :password_confirmation %>
+  </div>
+</div>
+
+<%= submit "Salvar", class: "btn btn-primary" %>
+
+</.form>

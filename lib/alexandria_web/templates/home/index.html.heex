@@ -1,0 +1,43 @@
+<h1 class="mt-5 text-center">Alexandria</h1>
+<p class="lead mb-5">
+  O Alexandria é uma aplicação na qual permite gerenciar seu acervo pessoal de obras literárias! Você pode cadastrar novas pessoas usuárias, livros e artigos!
+</p>
+
+<div class="row align-items-center">
+  <div class="col">
+    <div class="card text-center" style="width: 18rem;">
+      <img src={Routes.static_path(@conn, "/images/person.png")} class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+      <div class="card-body">
+        <h5 class="card-title">Pessoas</h5>
+        <p class="card-text">
+          Gerenciamento das pessoas do sistema.
+        </p>
+        <a href={Routes.person_path(@conn, :index)} class="btn btn-primary">Gerenciar Pessoas</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-center" style="width: 18rem;">
+      <img src={Routes.static_path(@conn, "/images/book.png")} class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+      <div class="card-body">
+        <h5 class="card-title">Livros</h5>
+        <p class="card-text">
+          Gerenciamento de Livros do sistema.
+        </p>
+        <a href="#" class="btn btn-primary">Gerenciar Livros</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card text-center" style="width: 18rem;">
+      <img src={Routes.static_path(@conn, "/images/article.png")} class="card-img-top mt-3 w-50 rounded mx-auto d-block">
+      <div class="card-body">
+        <h5 class="card-title">Artigos</h5>
+        <p class="card-text">
+          Gerenciamento de Artigos do sistema.
+        </p>
+        <a href="#" class="btn btn-primary">Gerenciar Artigos</a>
+      </div>
+    </div>
+  </div>
+</div>
